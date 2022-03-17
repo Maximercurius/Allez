@@ -81,6 +81,9 @@
 		0025F8E827E3A4920063DD9E = {
 			isa = PBXGroup;
 			children = (
+				0025F92A27E3A60C0063DD9E /* Controller */,
+				0025F92927E3A6010063DD9E /* View */,
+				0025F92827E3A5F90063DD9E /* Model */,
 				0025F8F327E3A4920063DD9E /* Allez */,
 				0025F90D27E3A4970063DD9E /* AllezTests */,
 				0025F91727E3A4970063DD9E /* AllezUITests */,
@@ -101,13 +104,7 @@
 		0025F8F327E3A4920063DD9E /* Allez */ = {
 			isa = PBXGroup;
 			children = (
-				0025F8F427E3A4920063DD9E /* AppDelegate.swift */,
-				0025F8F627E3A4920063DD9E /* SceneDelegate.swift */,
-				0025F8F827E3A4920063DD9E /* ViewController.swift */,
-				0025F8FA27E3A4920063DD9E /* Main.storyboard */,
-				0025F90027E3A4960063DD9E /* Assets.xcassets */,
-				0025F90227E3A4960063DD9E /* LaunchScreen.storyboard */,
-				0025F90527E3A4960063DD9E /* Info.plist */,
+				0025F92B27E3A6520063DD9E /* Supporting Files */,
 				0025F8FD27E3A4920063DD9E /* Allez.xcdatamodeld */,
 			);
 			path = Allez;
@@ -128,6 +125,41 @@
 				0025F91A27E3A4970063DD9E /* AllezUITestsLaunchTests.swift */,
 			);
 			path = AllezUITests;
+			sourceTree = "<group>";
+		};
+		0025F92827E3A5F90063DD9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0025F92927E3A6010063DD9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0025F92A27E3A60C0063DD9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0025F8F827E3A4920063DD9E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0025F92B27E3A6520063DD9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0025F8F427E3A4920063DD9E /* AppDelegate.swift */,
+				0025F8F627E3A4920063DD9E /* SceneDelegate.swift */,
+				0025F8FA27E3A4920063DD9E /* Main.storyboard */,
+				0025F90027E3A4960063DD9E /* Assets.xcassets */,
+				0025F90227E3A4960063DD9E /* LaunchScreen.storyboard */,
+				0025F90527E3A4960063DD9E /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,10 +476,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Allez/Info.plist;
+				INFOPLIST_FILE = "Allez/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,7 +492,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,10 +504,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Allez/Info.plist;
+				INFOPLIST_FILE = "Allez/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
