@@ -17,6 +17,8 @@
 		0025F90F27E3A4970063DD9E /* AllezTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F90E27E3A4970063DD9E /* AllezTests.swift */; };
 		0025F91927E3A4970063DD9E /* AllezUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F91827E3A4970063DD9E /* AllezUITests.swift */; };
 		0025F91B27E3A4970063DD9E /* AllezUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F91A27E3A4970063DD9E /* AllezUITestsLaunchTests.swift */; };
+		0025F92D27E448BA0063DD9E /* Task Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F92C27E448BA0063DD9E /* Task Tests.swift */; };
+		0025F93027E44A160063DD9E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F92F27E44A160063DD9E /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0025F91427E3A4970063DD9E /* AllezUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllezUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0025F91827E3A4970063DD9E /* AllezUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllezUITests.swift; sourceTree = "<group>"; };
 		0025F91A27E3A4970063DD9E /* AllezUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllezUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0025F92C27E448BA0063DD9E /* Task Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task Tests.swift"; sourceTree = "<group>"; };
+		0025F92F27E44A160063DD9E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +85,6 @@
 		0025F8E827E3A4920063DD9E = {
 			isa = PBXGroup;
 			children = (
-				0025F92A27E3A60C0063DD9E /* Controller */,
-				0025F92927E3A6010063DD9E /* View */,
-				0025F92827E3A5F90063DD9E /* Model */,
 				0025F8F327E3A4920063DD9E /* Allez */,
 				0025F90D27E3A4970063DD9E /* AllezTests */,
 				0025F91727E3A4970063DD9E /* AllezUITests */,
@@ -104,6 +105,9 @@
 		0025F8F327E3A4920063DD9E /* Allez */ = {
 			isa = PBXGroup;
 			children = (
+				0025F92827E3A5F90063DD9E /* Model */,
+				0025F92927E3A6010063DD9E /* View */,
+				0025F92A27E3A60C0063DD9E /* Controller */,
 				0025F92B27E3A6520063DD9E /* Supporting Files */,
 				0025F8FD27E3A4920063DD9E /* Allez.xcdatamodeld */,
 			);
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0025F90E27E3A4970063DD9E /* AllezTests.swift */,
+				0025F92E27E448C80063DD9E /* Model */,
 			);
 			path = AllezTests;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 		0025F92827E3A5F90063DD9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0025F92F27E44A160063DD9E /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +166,14 @@
 				0025F90527E3A4960063DD9E /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0025F92E27E448C80063DD9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0025F92C27E448BA0063DD9E /* Task Tests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +309,7 @@
 			files = (
 				0025F8F927E3A4920063DD9E /* ViewController.swift in Sources */,
 				0025F8F527E3A4920063DD9E /* AppDelegate.swift in Sources */,
+				0025F93027E44A160063DD9E /* Task.swift in Sources */,
 				0025F8FF27E3A4920063DD9E /* Allez.xcdatamodeld in Sources */,
 				0025F8F727E3A4920063DD9E /* SceneDelegate.swift in Sources */,
 			);
@@ -305,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0025F90F27E3A4970063DD9E /* AllezTests.swift in Sources */,
+				0025F92D27E448BA0063DD9E /* Task Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
