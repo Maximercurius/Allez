@@ -29,10 +29,28 @@ class NewTaskViewControllerTests: XCTestCase {
     func testHasTitleTextField() {
         XCTAssertTrue(sut.titleTextField.isDescendant(of: sut.view))
     }
-    //locationTextField
-    //dateTextField
-    //addressTextField
-    //descriptionTextField
     
-    //save / cancel buttons
+    func testHasLocationTextField() {
+        XCTAssertTrue(sut.locationTextField.isDescendant(of: sut.view))
+    }
+    
+    func testHasDateTextField() {
+        XCTAssertTrue(sut.dateTextField.isDescendant(of: sut.view))
+    }
+    
+    func testHasAddressTextField() {
+        XCTAssertTrue(sut.addressTextField.isDescendant(of: sut.view))
+    }
+    
+    func testHasDescriptionTextField() {
+        XCTAssertTrue(sut.descriptionTextField.isDescendant(of: sut.view))
+    }
+    
+    func testHasSaveButton() {
+        XCTAssertTrue(sut.saveButton.isDescendant(of: sut.view))
+    }
+    
+    func testHasCancelButton() {
+        XCTAssertTrue(sut.cancelButton.isDescendant(of: sut.view))
+    }
 }
