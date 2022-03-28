@@ -84,6 +84,14 @@ class TaskCellTests: XCTestCase {
         
         XCTAssertEqual(cell.dateLabel.text, dateString)
     }
+    
+    func testConfigureSetsLocationName() {
+        let location = Location(name: "Foo")
+        let task = Task(title:"Bar", location: location)
+        cell.configure(withTask: task)
+        
+        XCTAssertEqual(cell.locationLabel.text, task.location?.name)
+    }
 
 }
 
