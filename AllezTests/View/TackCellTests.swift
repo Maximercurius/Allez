@@ -92,6 +92,29 @@ class TaskCellTests: XCTestCase {
         
         XCTAssertEqual(cell.locationLabel.text, task.location?.name)
     }
+    
+    func cofigureCellWithTask() {
+        let task = Task(title: "Foo")
+        cell.configure(withTask: task, done: true)
+    }
+    
+    func testDoneTaskShouldStrikeThrough() {
+        cofigureCellWithTask()
+        
+        let attributedString = NSAttributedString(string: "Foo", attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
+        
+        XCTAssertEqual(cell.titleLabel.attributedText, attributedString)
+    }
+    
+    func testDoneTaskDateLabelEqualsNil() {
+        cofigureCellWithTask()
+        XCTAssertNil(cell.dateLabel)
+    }
+    
+    func testDoneTaskLocationLabelEqualsNil() {
+        cofigureCellWithTask()
+        XCTAssertNil(cell.locationLabel)
+    }
 
 }
 
