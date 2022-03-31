@@ -13,7 +13,7 @@ struct Task {
     let date: Date
     let location: Location?
     
-    init (title: String,
+    init(title: String,
           description: String? = nil,
           date: Date? = nil,
           location: Location? = nil) {

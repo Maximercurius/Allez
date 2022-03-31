@@ -51,7 +51,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="aUn-8Q-a1r" id="Hm6-Jd-56c"/>
+                                            <outlet property="dateLabel" destination="aUn-8Q-a1r" id="Sjz-en-fzl"/>
                                             <outlet property="locationLabel" destination="SAh-HY-dRx" id="tdz-Du-Mql"/>
                                             <outlet property="titleLabel" destination="afd-pp-hbC" id="1P8-6b-8g2"/>
                                         </connections>
@@ -191,6 +191,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="save" destination="C1X-u1-naz" eventType="touchUpInside" id="afX-f3-LyM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYa-0g-IMt">
                                 <rect key="frame" x="315" y="570" width="67" height="31"/>
