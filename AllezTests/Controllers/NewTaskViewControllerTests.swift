@@ -121,6 +121,7 @@ class NewTaskViewControllerTests: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
+    
 }
 
 extension NewTaskViewControllerTests {
