@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0007344D27F6145C00F45059 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007344C27F6145C00F45059 /* APIClientTests.swift */; };
 		0007344F27F6160900F45059 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007344E27F6160900F45059 /* APIClient.swift */; };
+		0007345227F7716200F45059 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007345127F7716200F45059 /* String+Extensions.swift */; };
 		0025F8F527E3A4920063DD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F8F427E3A4920063DD9E /* AppDelegate.swift */; };
 		0025F8F727E3A4920063DD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F8F627E3A4920063DD9E /* SceneDelegate.swift */; };
 		0025F8F927E3A4920063DD9E /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025F8F827E3A4920063DD9E /* TaskListViewController.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		0007344C27F6145C00F45059 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		0007344E27F6160900F45059 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0007345127F7716200F45059 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0025F8F127E3A4920063DD9E /* Allez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0025F8F427E3A4920063DD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0025F8F627E3A4920063DD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0007345027F7713600F45059 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0007345127F7716200F45059 /* String+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0025F8E827E3A4920063DD9E = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		0025F8F327E3A4920063DD9E /* Allez */ = {
 			isa = PBXGroup;
 			children = (
+				0007345027F7713600F45059 /* Extension */,
 				0025F93827E59C8D0063DD9E /* Manager */,
 				0025F92827E3A5F90063DD9E /* Model */,
 				0025F92927E3A6010063DD9E /* View */,
@@ -385,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0025F8F927E3A4920063DD9E /* TaskListViewController.swift in Sources */,
+				0007345227F7716200F45059 /* String+Extensions.swift in Sources */,
 				0025F8F527E3A4920063DD9E /* AppDelegate.swift in Sources */,
 				0025F93F27E799F80063DD9E /* DataProvider.swift in Sources */,
 				00A9003B27F1A45A00D7CCC4 /* NewTaskViewController.swift in Sources */,
