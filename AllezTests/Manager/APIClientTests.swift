@@ -75,7 +75,40 @@ class APIClientTests: XCTestCase {
             
         
     }
+    func testLoginInvalidJsonReturnsError() {
+        
+        mockURLSession = MockURLSession(data: Data(), urlResponse: nil, responseError: nil)
+        sut.urlSession = mockURLSession
+        let errorExpectotion = expectation(description: "Error expectation")
+        
+        var coughtError: Error?
+        
+        sut.login(withName: "login", password: "passsword") { _, error in
+             coughtError = error
+            errorExpectotion.fulfill()
+        }
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(coughtError)
+        }
+    }
+    func testLoginWhenDataIsNilReturnsError() {
+        
+        mockURLSession = MockURLSession(data: nil, urlResponse: nil, responseError: nil)
+        sut.urlSession = mockURLSession
+        let errorExpectotion = expectation(description: "Error expectation")
+        
+        var coughtError: Error?
+        
+        sut.login(withName: "login", password: "passsword") { token, error in
+             coughtError = error
+            errorExpectotion.fulfill()
+        }
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(coughtError)
+        }
+    }
 }
+
 
 extension APIClientTests {
     
