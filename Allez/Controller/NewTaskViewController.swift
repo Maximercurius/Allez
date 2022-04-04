@@ -27,7 +27,7 @@ class NewTaskViewController: UIViewController {
         let date = dateFormatter.date(from: dateTextField.text!)
         let descriptionString = descriptionTextField.text
         let addressString = addressTextField.text
-        geocoder.geocodeAddressString(addressString!) { [unowned self] (placemarks, error) in
+        geocoder.geocodeAddressString(addressString!) { (placemarks, error) in
             let placemark = placemarks?.first
             let coordinate = placemark?.location?.coordinate
             let location = Location(name: locationString, coordinate: coordinate)

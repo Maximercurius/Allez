@@ -139,10 +139,6 @@ class NewTaskViewControllerTests: XCTestCase {
         
         //then
         XCTAssertTrue(mockNewTaskViewController.isDismissed)
-
-
-
-
     }
 }
 
