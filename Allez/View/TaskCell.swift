@@ -5,14 +5,14 @@
 //  Created by Makarov_Maxim on 21.03.2022.
 //
 
+
 import UIKit
 
 class TaskCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     private var dateFormatter: DateFormatter {
         let df = DateFormatter()
@@ -20,11 +20,11 @@ class TaskCell: UITableViewCell {
         return df
     }
     
-    func configure(withTask task: Task, done: Bool = false)  {
+    func configure(withTask task: Task, done: Bool = false) {
         
         if done {
-            let attributeString = NSAttributedString(string: task.title, attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
-            titleLabel.attributedText = attributeString
+            let attributedString = NSAttributedString(string: task.title, attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
+            titleLabel.attributedText = attributedString
             dateLabel = nil
             locationLabel = nil
         } else {

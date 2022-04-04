@@ -15,8 +15,8 @@ class TaskCellTests: XCTestCase {
     override func setUpWithError() throws {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: String(describing: TaskListViewController.self)) as! TaskListViewController
-        
         controller.loadViewIfNeeded()
+        
         let tableView = controller.tableView
         let dataSource = FakeDataSource()
         tableView?.dataSource = dataSource
