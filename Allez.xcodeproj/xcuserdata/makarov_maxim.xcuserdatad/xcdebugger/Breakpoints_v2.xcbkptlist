@@ -30,8 +30,8 @@
             filePath = "AllezTests/Controllers/NewTaskViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "MockCLGeocoder"
             landmarkType = "3">
          </BreakpointContent>

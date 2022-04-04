@@ -16,6 +16,7 @@ class NewTaskViewControllerTests: XCTestCase {
 
     
     override func setUp() {
+        super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         sut = storyboard.instantiateViewController(withIdentifier: String(describing: NewTaskViewController.self)) as? NewTaskViewController
         sut.loadViewIfNeeded()
@@ -23,10 +24,12 @@ class NewTaskViewControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDownWithError()
     }
     
     func testHasTitleTextField() {
@@ -138,7 +141,9 @@ class NewTaskViewControllerTests: XCTestCase {
         mockNewTaskViewController.save()
         
         //then
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
         XCTAssertTrue(mockNewTaskViewController.isDismissed)
+        }
     }
 }
 
