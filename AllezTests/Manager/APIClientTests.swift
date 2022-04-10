@@ -23,12 +23,10 @@ class APIClientTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDownWithError()
     }
     
     func userLogin() {
@@ -146,7 +144,7 @@ extension APIClientTests {
         
         typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
         var completionHandler: CompletionHandler?
-        
+
         init(data: Data?, urlResponse: URLResponse?, responseError: Error?) {
             self.data = data
             self.urlResponse = urlResponse

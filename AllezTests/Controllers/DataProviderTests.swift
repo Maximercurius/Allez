@@ -34,6 +34,8 @@ class DataProviderTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        sut.taskManager?.removeAll()
+        super.tearDownWithError()
     }
     
     func testNumberOfSectionsIsTwo() {

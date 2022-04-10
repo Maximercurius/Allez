@@ -13,13 +13,14 @@ class TaskManagerTests: XCTestCase {
     var sut: TaskManager!
     
     override func setUpWithError() throws {
-        super.setUpWithError()
+        try super.setUpWithError()
         sut = TaskManager()
     }
     
     override func tearDownWithError() throws {
+        sut.removeAll()
         sut = nil
-        super.tearDownWithError()
+        try super.tearDownWithError()
     }
     
     func testInitTaskManagerWithZeroTasks() {
@@ -96,5 +97,25 @@ class TaskManagerTests: XCTestCase {
         
         XCTAssertTrue(sut.tasksCount == 1)
 
+    }
+    func testWhenTAskManagerRecreatedSavedTaskShouldBeEqual() {
+        var taskManager: TaskManager! = TaskManager()
+        let task = Task(title: "Foo")
+        let task1 = Task(title: "Bar")
+        
+        taskManager.add(task: task)
+        taskManager.add(task: task1)
+        
+        NotificationCenter.default.post(name: UIApplication.willResignActiveNotification, object: nil)
+        
+        taskManager = nil
+        
+        taskManager = TaskManager()
+        
+        XCTAssertEqual(taskManager.tasksCount, 2)
+        XCTAssertEqual(taskManager.task(at: 0), task)
+        XCTAssertEqual(taskManager.task(at: 1), task1)
+
+        
     }
 }
