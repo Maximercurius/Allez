@@ -12,6 +12,8 @@ struct Task {
     let description: String?
     let date: Date
     let location: Location?
+    #warning("ADD TEST")
+    var isDone = false
     
     var dict: [String : Any] {
         var dict: [String : Any] = [:]

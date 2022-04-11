@@ -35,6 +35,11 @@ extension DataProvider: UITableViewDelegate {
         case .done: break
         }
     }
+    
+    #warning("ADD TEST")
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
 }
 
 extension DataProvider: UITableViewDataSource {
@@ -63,7 +68,7 @@ extension DataProvider: UITableViewDataSource {
         case .done: task = taskManager.doneTask(at: indexPath.row)
         }
                 
-        cell.configure(withTask: task)
+        cell.configure(withTask: task, done: task.isDone)
         
         return cell
     }
