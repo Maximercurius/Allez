@@ -100,6 +100,18 @@ class NewTaskViewControllerTests: XCTestCase {
         
     }
     
+    func testCancelButtonHasDismissMethod() {
+        let cancelButton = sut.cancelButton
+        
+        guard let actions = cancelButton?.actions(forTarget: sut, forControlEvent: .touchUpInside)
+        else { XCTFail()
+            return
+        }
+        XCTAssertTrue(actions.contains("cancelButton:"))
+        
+        
+    }
+    
     func testGeocoderFetchesCorrectCoordinate() {
         let geocoderAnswer = expectation(description: "Geocoder answer")
         let addressString = "Tuymen"

@@ -39,6 +39,10 @@ class NewTaskViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     var dateFormatter: DateFormatter{
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yy"
