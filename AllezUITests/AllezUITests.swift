@@ -30,8 +30,6 @@ class AllezUITests: XCTestCase {
 
     func testExample() throws {
         
-        app.launch()
-        
         XCTAssertTrue(app.isOnMainView)
         
         app.navigationBars["Allez.TaskListView"].buttons["Add"].tap()
@@ -50,20 +48,20 @@ class AllezUITests: XCTestCase {
         app.textFields["Description"].tap()
         app.textFields["Description"].typeText("Baz")
         
-        XCTAssertFalse(app.isOnMainView)
-
+        XCTAssertTrue(app.isOnMainView)
+        
         app.buttons["Save"].tap()
         
         XCTAssertTrue(app.tables.staticTexts["Foo"].exists)
         XCTAssertTrue(app.tables.staticTexts["Bar"].exists)
         XCTAssertTrue(app.tables.staticTexts["01.01.19"].exists)
+        
+        
 
 
     }
     
     func testWhenCellIsSwipedLeftDoneButtonAppeared() {
-
-        app.launch()
         
         XCTAssertTrue(app.isOnMainView)
         
@@ -83,17 +81,16 @@ class AllezUITests: XCTestCase {
         app.textFields["Description"].tap()
         app.textFields["Description"].typeText("Baz")
         
-        XCTAssertFalse(app.isOnMainView)
+        XCTAssertTrue(app.isOnMainView)
 
         app.buttons["Save"].tap()
-        
-        XCTAssertTrue(app.isOnMainView)
         
         let tablesQuery = app.tables.cells
         tablesQuery.element(boundBy: 0).swipeLeft()
         tablesQuery.element(boundBy: 0).buttons["Done"].tap()
         
         XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "date").label, "")
+        
     }
     
 

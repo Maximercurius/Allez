@@ -14,9 +14,8 @@ protocol URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
 
-extension URLSession: URLSessionProtocol {
-    
-}
+extension URLSession: URLSessionProtocol {}
+
 class APIClient {
     lazy var urlSession: URLSessionProtocol = URLSession.shared
     
@@ -34,6 +33,9 @@ class APIClient {
         guard let url = URL(string: "https://todoapp.com/login?\(query)") else { fatalError() }
         
         urlSession.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                return completionHandler(nil, error)
+            }
             do {
                 guard let data = data else {
                     completionHandler(nil, NetworkError.emptyData)

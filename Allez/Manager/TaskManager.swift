@@ -29,10 +29,11 @@ class TaskManager {
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(save), name: UIApplication.willResignActiveNotification, object: nil)
+        
         if let data = try? Data(contentsOf: tasksURL) {
-            let dictionaries = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String : Any]]
+            let dictionaries = try! PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String : Any]]
             
-            for dict in dictionaries! {
+            for dict in dictionaries {
                 if let task = Task(dict: dict) {
                     tasks.append(task)
                 }
@@ -54,11 +55,10 @@ class TaskManager {
         }
         let plistData = try? PropertyListSerialization.data(fromPropertyList: taskDictionaries, format: .xml, options: PropertyListSerialization.WriteOptions(0))
         
-        try? plistData?.write(to: tasksURL, options: .atomic)
+        try! plistData!.write(to: tasksURL, options: .atomic)
     }
     
     func add(task: Task) {
-        print(task)
         if !tasks.contains(task) {
         tasks.append(task)
         }

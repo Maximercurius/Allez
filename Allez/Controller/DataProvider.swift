@@ -5,7 +5,6 @@
 //  Created by Makarov_Maxim on 20.03.2022.
 //
 
-import Foundation
 import UIKit
 
 enum Section: Int, CaseIterable {
@@ -36,10 +35,10 @@ extension DataProvider: UITableViewDelegate {
         }
     }
     
-    #warning("ADD TEST")
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
-    }
+//    #warning("ADD TEST")
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Section \(section)"
+//    }
 }
 
 extension DataProvider: UITableViewDataSource {
