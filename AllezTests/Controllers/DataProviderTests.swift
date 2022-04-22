@@ -84,9 +84,7 @@ class DataProviderTests: XCTestCase {
     }
     
     func testCellForRowAtIndexPathDequeuesCellFromTableView() {
-        let mockTableView = MockTableView()
-        mockTableView.dataSource = sut
-        mockTableView.register(TaskCell.self, forCellReuseIdentifier: String(describing: TaskCell.self))
+        let mockTableView = MockTableView.mockTableView(withDataSource: sut)
         
         sut.taskManager?.add(task: Task(title: "Foo"))
         mockTableView.reloadData()

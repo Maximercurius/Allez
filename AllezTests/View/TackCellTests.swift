@@ -76,7 +76,7 @@ class TaskCellTests: XCTestCase {
     func testConfigureSetsDate() {
         
         let task = Task(title: "Foo")
-        cell.configure(withTask: task)
+        cell.configure(withTask: task, done: false)
         
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yy"

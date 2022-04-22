@@ -97,19 +97,22 @@ class TaskListViewControllerTests: XCTestCase {
         
     }
     func testTappingCellSendsNotification() {
-        let task = Task(title: " Foo")
-        sut.dataProvider.taskManager?.add(task: task)
+        let task = Task(title: "Foo")
+        sut.dataProvider.taskManager!.add(task: task)
         
-        expectation(forNotification: NSNotification.Name(rawValue: "DidSelectRow notification"), object: nil) { notificcation -> Bool in
+        
+        expectation(forNotification: NSNotification.Name(rawValue: "DidSelectRow notification"), object: nil) { notification -> Bool in
             
-            guard let taskFromNotification = notificcation.userInfo?["task"] as? Task else {
+            guard let taskFromNotification = notification.userInfo?["task"] as? Task else {
                 return false
             }
+            
             return task == taskFromNotification
         }
+        
         let tableView = sut.tableView
-        tableView?.delegate?.tableView!(tableView!, didDeselectRowAt: IndexPath(row: 0, section: 0))
-        waitForExpectations(timeout: 1)
+        tableView?.delegate?.tableView!(tableView!, didSelectRowAt: IndexPath(row: 0, section: 0))
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testSelectedCellNotificationPushesDetailVC() {

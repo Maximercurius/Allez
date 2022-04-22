@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var datesLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     
     var task: Task!
@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         self.titleLabel.text = task.title
         self.descriptionLabel.text = task.description
         self.locationLabel.text = task.location?.name
-        self.dateLabel.text = dateFormatter.string(from: task.date)
+        self.datesLabel.text = dateFormatter.string(from: task.date)
         
         if let coordinate = task.location?.coordinate {
             let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 100, longitudinalMeters: 100)

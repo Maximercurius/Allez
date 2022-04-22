@@ -21,50 +21,50 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="hb4-jB-zEa" customClass="TaskCell" customModule="Allez" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hb4-jB-zEa" id="YK0-nS-g1q">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afd-pp-hbC">
-                                                    <rect key="frame" x="186" y="11" width="42" height="21.5"/>
+                                                    <rect key="frame" x="186" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemPinkColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-HY-dRx">
-                                                    <rect key="frame" x="333" y="11" width="42" height="21.5"/>
+                                                    <rect key="frame" x="333" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemPurpleColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ct6-Oa-Fds">
-                                                    <rect key="frame" x="110" y="11" width="76" height="21.5"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="date"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-V8-WFf">
+                                                    <rect key="frame" x="79" y="11" width="76" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemIndigoColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="centerY" secondItem="YK0-nS-g1q" secondAttribute="centerY" id="6bV-1U-GzR"/>
-                                                <constraint firstItem="afd-pp-hbC" firstAttribute="leading" secondItem="ct6-Oa-Fds" secondAttribute="trailing" id="88d-By-Xdz"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="baseline" secondItem="SAh-HY-dRx" secondAttribute="baseline" id="8KL-kI-r0p"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="leading" secondItem="hZa-V8-WFf" secondAttribute="trailing" constant="31" id="8au-x7-OG2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SAh-HY-dRx" secondAttribute="trailing" constant="19" id="8tg-OO-slI"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="firstBaseline" secondItem="afd-pp-hbC" secondAttribute="firstBaseline" id="Gh6-uQ-Q4h"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="baseline" secondItem="SAh-HY-dRx" secondAttribute="baseline" id="Mzo-kR-ich"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="leading" secondItem="YK0-nS-g1q" secondAttribute="leadingMargin" constant="90" id="PqV-oi-4Hz"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="bottom" secondItem="YK0-nS-g1q" secondAttribute="bottomMargin" id="NbU-r9-Q9E"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="centerX" secondItem="YK0-nS-g1q" secondAttribute="centerX" id="Rmg-mt-K3B"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="top" secondItem="YK0-nS-g1q" secondAttribute="topMargin" id="Ws8-ab-0gw"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="centerY" secondItem="hZa-V8-WFf" secondAttribute="centerY" id="XAG-Ui-z5V"/>
                                                 <constraint firstItem="SAh-HY-dRx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="afd-pp-hbC" secondAttribute="trailing" constant="8" symbolic="YES" id="gDa-8Q-Lty"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="baseline" secondItem="afd-pp-hbC" secondAttribute="baseline" id="rr3-le-T2z"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="top" secondItem="YK0-nS-g1q" secondAttribute="topMargin" id="vlX-Gm-w58"/>
-                                                <constraint firstItem="ct6-Oa-Fds" firstAttribute="firstBaseline" secondItem="SAh-HY-dRx" secondAttribute="firstBaseline" id="xcX-wz-tut"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="firstBaseline" secondItem="SAh-HY-dRx" secondAttribute="firstBaseline" id="jrQ-vU-DR0"/>
+                                                <constraint firstItem="hZa-V8-WFf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YK0-nS-g1q" secondAttribute="leading" constant="20" symbolic="YES" id="lGU-xC-0y2"/>
+                                                <constraint firstItem="afd-pp-hbC" firstAttribute="firstBaseline" secondItem="hZa-V8-WFf" secondAttribute="firstBaseline" id="olZ-DF-pww"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <connections>
-                                            <outlet property="dateLabel" destination="ct6-Oa-Fds" id="tGx-rr-eWy"/>
-                                            <outlet property="locationLabel" destination="SAh-HY-dRx" id="tdz-Du-Mql"/>
-                                            <outlet property="titleLabel" destination="afd-pp-hbC" id="1P8-6b-8g2"/>
+                                            <outlet property="dateLabel" destination="hZa-V8-WFf" id="V7h-3c-nie"/>
+                                            <outlet property="locationLabel" destination="SAh-HY-dRx" id="ArY-vl-SXJ"/>
+                                            <outlet property="titleLabel" destination="afd-pp-hbC" id="MPj-kf-qnf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -157,7 +157,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="L8O-0d-rCJ" id="hkQ-CD-FAW"/>
+                        <outlet property="datesLabel" destination="L8O-0d-rCJ" id="hkQ-CD-FAW"/>
                         <outlet property="descriptionLabel" destination="3M1-lJ-7Zq" id="f2f-eX-EQE"/>
                         <outlet property="locationLabel" destination="UnI-V6-iHc" id="y6I-Gh-ykL"/>
                         <outlet property="mapView" destination="age-GV-nRa" id="1uX-lw-Sx1"/>
@@ -296,9 +296,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

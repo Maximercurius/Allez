@@ -39,8 +39,8 @@ class DetailViewControllerTests: XCTestCase {
     
     func testHasDateLabel() {
         
-        XCTAssertNotNil(sut.dateLabel)
-        XCTAssertTrue(sut.dateLabel.isDescendant(of: sut.view))
+        XCTAssertNotNil(sut.datesLabel)
+        XCTAssertTrue(sut.datesLabel.isDescendant(of: sut.view))
     }
     
     func testHasLocationLabel() {
@@ -84,7 +84,7 @@ class DetailViewControllerTests: XCTestCase {
     
     func testSettingTaskSetsDateLabel() {
         setupTaskAndAppearanceTransition()
-        XCTAssertEqual(sut.dateLabel.text, "28.03.22")
+        XCTAssertEqual(sut.datesLabel.text, "28.03.22")
     }
     func testSettingTaskSetsMapView() {
         setupTaskAndAppearanceTransition()
